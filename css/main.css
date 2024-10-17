@@ -1,0 +1,88 @@
+@font-face {
+  font-family: cantarellregular;
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/cantarell_regular-webfont.woff") format("woff"), url("../fonts/cantarell_regular-webfont.woff2") format("woff2");
+}
+body {
+  font-family: "Orbitron", arial, sans-serif;
+}
+
+h2 {
+  font-family: "Orbitron", helvetica, arial;
+  font-size: 28px;
+  color: #BA3B0A;
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+#main-header {
+  background-color: white;
+  margin-bottom: 20px;
+}
+#main-header #logo {
+  display: block;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+}
+
+#main-nav {
+  margin-top: 40px;
+}
+
+#main-nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: end;
+  padding: 0;
+  margin: 20px 0 0 0; /*trbl*/
+}
+
+#main-nav ul li {
+  margin-right: 20px;
+}
+
+#main-nav ul li:last-child {
+  margin-right: 0;
+}
+
+#main-nav a {
+  color: #FFA458;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  #main-header {
+    justify-content: flex-end;
+  }
+  #logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+footer {
+  background-color: #BA3B0A;
+  color: white;
+  height: 40px;
+}
+
+footer p {
+  line-height: 40px;
+}
+
+.card {
+  padding: 20px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}

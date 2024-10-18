@@ -141,6 +141,11 @@ h3 {
   transform: scale(1.05);
 }
 
+.contact-container {
+  background-color: #C0C0C0;
+  border-radius: 30px;
+}
+
 .line-separator {
   margin-bottom: 20px;
   border-bottom: solid 3px #FF0000;
@@ -182,34 +187,91 @@ p span {
   justify-content: space-between;
 }
 
-.about-footer {
-  margin-top: 200px;
+#contact p {
+  color: #010101;
 }
 
-#category {
+#email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+#phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 50px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+#form input, textarea {
+  padding: 22px;
+  border: 2px solid #d6d6d6;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font: inherit;
+  width: 90%;
+  margin-left: 5%;
+}
+
+#form textarea {
+  height: 250px;
+}
+
+#form input[type=submit] {
+  padding: 12px 28px;
+  background: #FF0000;
+  color: #fff;
+  border: none;
+  transition: all 200ms ease-in;
+}
+
+#form input[type=submit]:hover {
+  background-color: #626262;
+  border-radius: 0;
+}
+
+#about-me {
+  margin-bottom: 250px;
+}
+
+.category {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#year {
+.year {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#software {
+.software {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-#work div {
+.work div {
   margin-top: 40px;
 }
 
-#next-project {
+.next-project {
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: space-between;
+}
+
+.next-project p {
+  text-decoration: none;
 }

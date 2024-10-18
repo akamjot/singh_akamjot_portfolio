@@ -1,22 +1,27 @@
 @use '../abstracts' as a;
 
-#category {
+.category {
     @include a.flex-space-between;
 }
 
-#year {
+.year {
     @include a.flex-space-between;
 }
 
-#software {
+.software {
     @include a.flex-space-between;
 }
 
-#work div {
+.work div {
     margin-top: 40px;
 
 }
 
-#next-project {
-    @include a.flex-end;
+.next-project {
+    @include a.flex-space-between;
+    
+}
+
+.next-project p {
+    text-decoration: none;
 }

@@ -24,6 +24,11 @@ p {
   font-size: 18px;
 }
 
+h3 {
+  color: white;
+  font-size: 25px;
+}
+
 #intro h1 {
   margin-bottom: 10px;
   color: white;
@@ -92,9 +97,9 @@ p {
 }
 
 .line-separator {
-  margin-top: 20px;
-  border-top: solid 3px #FF0000;
-  padding-top: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 3px #FF0000;
+  padding-bottom: 20px;
 }
 
 .hidden {
@@ -134,4 +139,32 @@ p span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+#category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#year {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#software {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#work div {
+  margin-top: 40px;
+}
+
+#next-project {
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }

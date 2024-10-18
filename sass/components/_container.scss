@@ -1,3 +1,5 @@
+@use '../abstracts' as a;
+
 .container {
     background-color: white;
     height: 300px;
@@ -7,4 +9,9 @@
 
 .container:hover {
     transform: scale(1.05);
+}
+
+.contact-container {
+    background-color: a.$footer-background;
+    border-radius: 30px;
 }

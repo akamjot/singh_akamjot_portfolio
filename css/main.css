@@ -38,6 +38,10 @@ h3 {
   color: white;
 }
 
+#intro span {
+  color: #FF0000;
+}
+
 #main-header {
   background-color: #C0C0C0;
   margin-bottom: 20px;
@@ -85,6 +89,47 @@ h3 {
     margin-right: 50px;
   }
 }
+#footer {
+  background-color: #C0C0C0;
+  margin-top: 20px;
+}
+
+#footer h3 {
+  color: #010101;
+}
+
+#footer p {
+  color: #010101;
+}
+
+#quicklinks a {
+  color: #010101;
+  display: block;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+#contact-info {
+  text-align: right;
+}
+
+.fa {
+  font-size: 40px;
+  margin-right: 25px;
+}
+
+#lower-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#icons a {
+  text-decoration: none;
+  text-decoration-color: none;
+  color: #000000;
+}
+
 .container {
   background-color: white;
   height: 300px;
@@ -119,10 +164,6 @@ body {
   font-size: 35px;
 }
 
-#intro span {
-  color: #FF0000;
-}
-
 h1 span {
   font-size: 40px;
 }
@@ -139,6 +180,10 @@ p span {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.about-footer {
+  margin-top: 200px;
 }
 
 #category {

@@ -1,2 +1,41 @@
 @use '../abstracts' as a;
 
+#footer {
+    background-color: a.$footer-background;
+    margin-top: 20px;
+}
+
+#footer h3 {
+    color: a.$primary-color;
+}
+
+#footer p {
+    color: a.$primary-color;
+}
+
+#quicklinks a{
+    color: a.$primary-color;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+#contact-info {
+    text-align: right;
+}
+
+
+.fa {
+    font-size: 40px;
+    margin-right: 25px
+}
+
+#lower-footer {
+    @include a.flex-space-between;
+}
+
+#icons a {
+    text-decoration: none;
+    text-decoration-color: none;
+    color: a.$icon-color;
+}

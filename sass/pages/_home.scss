@@ -1,0 +1,39 @@
+.hidden {
+    display: none;
+}
+
+body {
+    background-image: url(../../images/background.png);
+    background-size: cover;
+}
+
+#intro {
+    text-align: center;
+}
+
+#intro h1 {
+    font-size: 35px;
+}
+
+#intro span {
+    color: #FF0000;
+}
+
+h1 span {
+    font-size: 40px;
+}
+
+p span {
+    font-size: 22px;
+}
+
+#bottom-links {
+    margin: 50px 100px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+

@@ -8,11 +8,25 @@ body {
 
 h2 {
     font-family: v.$heading-font-family;
-    font-size: 28px;
+    font-size: 30px;
     color: v.$accent-color;
     margin-bottom: 20px;
+    margin-top: 70px;
+    color: white;
 }
 p {
     line-height: 24px;
     margin-bottom: 20px;
+    color: v.$body-text-color;
+    font-size: 18px;
+}
+
+#intro h1 {
+    margin-bottom: 10px;
+    color: v.$body-text-color;
+
+}
+
+#bottom-links a{
+    color: v.$body-text-color;
 }

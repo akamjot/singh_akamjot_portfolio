@@ -15,13 +15,7 @@ img, embed, object, video, picture {
   *, *::before, *::after {
     box-sizing: inherit; 
   }
-  
-  /* ---Mini CSS reset--- */
-  
-  body, p, h1, h2, h3, h4, h5 {
-     margin: 0px; 
-     padding: 0px;
-  }
+
   
   /* ---Utility Classes--- */
   

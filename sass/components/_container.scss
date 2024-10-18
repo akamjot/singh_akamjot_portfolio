@@ -1,0 +1,10 @@
+.container {
+    background-color: white;
+    height: 300px;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+    transition: all .5s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}

@@ -12,21 +12,21 @@ body {
 }
 
 #intro h1 {
-    font-size: 35px;
+    font-size: 25px;
 }
 
 
 
 h1 span {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 p span {
-    font-size: 22px;
+    font-size: 18px;
 }
 
 #bottom-links {
-    margin: 50px 100px;
+    margin: 20px 20px;
 }
 
 .links {
@@ -35,3 +35,20 @@ p span {
     justify-content: space-between;
 }
 
+@media(min-width: 768px){
+    #bottom-links {
+        margin: 50px 100px;
+    }
+
+    #intro h1 {
+        font-size: 35px;
+    }
+
+    h1 span {
+        font-size: 40px;
+    }
+
+    p span {
+        font-size: 22px;
+    }
+}

@@ -1,15 +1,7 @@
 @use '../abstracts' as a;
 
-.category {
-    @include a.flex-space-between;
-}
-
-.year {
-    @include a.flex-space-between;
-}
-
-.software {
-    @include a.flex-space-between;
+#couple-resort-info p {
+    margin-top: 30px;
 }
 
 .work div {

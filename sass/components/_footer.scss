@@ -7,10 +7,12 @@
 
 #footer h3 {
     color: a.$primary-color;
+    font-size: 18px;
 }
 
 #footer p {
     color: a.$primary-color;
+    font-size: 15px;
 }
 
 #quicklinks a{
@@ -18,6 +20,7 @@
     display: block;
     text-decoration: none;
     margin-bottom: 10px;
+    font-size: 15px;
 }
 
 #contact-info {
@@ -25,9 +28,14 @@
 }
 
 
-.fa {
-    font-size: 40px;
-    margin-right: 25px
+
+
+#icons {
+    left: 0;
+}
+
+#rights {
+    text-align: right;
 }
 
 #lower-footer {
@@ -38,4 +46,16 @@
     text-decoration: none;
     text-decoration-color: none;
     color: a.$icon-color;
+}
+
+@media(min-width: 768px){
+
+    #footer h3 {
+        font-size: 25px;
+    }
+
+    .fa {
+        font-size: 40px;
+        margin-right: 25px
+    }
 }

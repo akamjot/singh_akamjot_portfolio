@@ -1,57 +1,88 @@
 @use '../abstracts' as a;
 
-#main-header {
-    background-color: #C0C0C0;
-    margin-bottom: 20px;
+nav{
     height: 90px;
+    background-color: a.$footer-background;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .links-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav a{
+    height: 100%;
+    padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-   
-}
-
-#logo {
-    height: 70px;
-    width: 152px;
-}
-
-
-#main-nav ul {
-    list-style: none;
-    
-}
-
-#main-nav ul li {
-    margin-right: 20px;
-    display: inline;
-}
-
-#main-nav ul li:last-child {
-    margin-right: 0;
-}
-
-#main-nav a {
-    color: a.$primary-color;
     text-decoration: none;
+    color: var(--text-color);
+  }
 
-}
+  nav a:hover{
+    background-color: var(--accent-color);
+  }
 
-@media screen and (min-width: 768px) {
-    #main-header {
-        justify-content: space-between;
+  nav .home-link{
+    margin-right: auto;
+  }
+
+  #sidebar-active{
+    display: none;
+  }
+
+  .open-sidebar-button, .close-sidebar-button{
+    display: none;
+  }
+
+  @media(max-width: 768px){
+
+    .links-container{
+      flex-direction: column;
+      align-items: flex-start;
+  
+      position: fixed;
+      top: 0;
+      right: -100%;
+      z-index: 10;
+      width: 300px;
+  
+      background-color: a.$footer-background;
+      box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+      transition: 0.75s ease-out;
     }
 
-    #logo {
-        margin-left: 0;
-        margin-right: 0;
+    nav a{
+      box-sizing: border-box;
+      height: auto;
+      width: 100%;
+      padding: 20px 30px;
+      justify-content: flex-start;
     }
 
-    #main-nav ul li {
-        display: inline;        
+    .open-sidebar-button, .close-sidebar-button{
+      padding: 20px;
+      display: block;
     }
 
-    #main-nav ul {
-        margin-right: 50px;
+    #sidebar-active:checked ~ .links-container{
+      right: 0;
     }
-}
+
+    #sidebar-active:checked ~ #overlay{
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 9;
+    }
+
+  }
 

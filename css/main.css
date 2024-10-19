@@ -244,22 +244,8 @@ p span {
   margin-bottom: 250px;
 }
 
-.category {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.year {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.software {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+#couple-resort-info p {
+  margin-top: 30px;
 }
 
 .work div {
@@ -274,4 +260,16 @@ p span {
 
 .next-project p {
   text-decoration: none;
+}
+
+#billybeer-info p {
+  margin-top: 30px;
+}
+
+#promo-video-info p {
+  margin-top: 30px;
+}
+
+#industrynight-info p {
+  margin-top: 30px;
 }

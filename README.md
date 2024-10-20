@@ -21,5 +21,4 @@ My portfolio is going to be a multipage website that includes homepage, projects
 
 # CREDITS 
 
-Youtube
-Professors
+Youtube & Professors

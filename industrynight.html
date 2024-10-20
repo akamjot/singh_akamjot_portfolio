@@ -11,23 +11,35 @@
 <body>
     <header>
         <div class="sticky-nav-con">
-            <section id="main-header">
-                <h2 class="hidden">header</h2>
-                <div>
-                    <img src="images/logo.svg" alt="logo" id="logo">
-                </div>
+            <section id="main-header"> 
+                <h2 class="hidden">hel
+                </h2>
+                
+                <nav>
+                    <img src="images/logo.svg" alt="logo for mobile" id="mobile-logo">
+                    
+                    <input type="checkbox" id="sidebar-active">
+                    <label for="sidebar-active" class="open-sidebar-button">
+                      <img src="images/burger.svg" alt="hamburger">
+                    </label>
+                    <label id="overlay" for="sidebar-active"></label>
+                    <div class="links-container">
+                      <label for="sidebar-active" class="close-sidebar-button">
+                        <i class="fa fa-times"></i>
+                      </label>
+                
 
-                <div id="main-nav">
-                    <ul>
-                        <li><a href="home.html">HOME</a></li>
-                        <li><a href="projects.html">PROJECTS</a></li>
-                        <li><a href="aboutme.html">ABOUT ME</a></li>
-                        <li><a href="contact.html">CONTACT</a></li>
-                    </ul>
-                </div>
+                      <a class="home-link" href="home.html"><img src="images/logo.svg" alt="logo" id="logo"></a> 
+                      <a href="home.html">HOME</a> 
+                      <a href="projects.html">PROJECTS</a>
+                      <a href="aboutme.html">ABOUT ME</a>
+                      <a href="contact.html">CONTACT</a>
+                      
+                    </div>
+                </nav>
 
 
-            </section>
+                </section>
 
         </div>
     </header>
@@ -36,11 +48,11 @@
 
         <section id="industrynight" class="grid-con">
 
-            <div class="m-col-start-3 m-col-end-11">
+            <div class="col-span-full m-col-start-3 m-col-end-11">
             <h2 class="line-separator">INDUSTRY NIGHT</h2>
             </div>
 
-            <div class="container m-col-start-3 m-col-end-11"></div>
+            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
 
 
         </section>
@@ -48,20 +60,20 @@
         <section id="industrynight-info" class="grid-con">
 
             
-                <h3 class="m-col-start-3 m-col-end-5">CATEGORY</h3>
-                <P class="m-col-start-6 m-col-end-11">UX/UI Design, 3D Designing, Logo & Label Designing</P>
+                <h3 class="col-start-1 col-end-3 m-col-start-3 m-col-end-5">CATEGORY</h3>
+                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11">UX/UI Design, 3D Designing, Logo & Label Designing</P>
 
      
-                <h3 class="m-col-start-3 m-col-end-5">YEAR</h3>
-                <P class="m-col-start-6 m-col-end-11">2023</P>
+                <h3 class="col-start-1 col-end-3 m-col-start-3 m-col-end-5">YEAR</h3>
+                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11">2023</P>
 
 
 
-                <h3 class="m-col-start-3 m-col-end-5">SOFTWARE</h3>
-                <P class="m-col-start-6 m-col-end-11">Adobe XD, Visual Studio, Cinema 4D and Adobe illustrator</P>
+                <h3 class="col-start-1 col-end-3 m-col-start-3 m-col-end-5">SOFTWARE</h3>
+                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11">Adobe XD, Visual Studio, Cinema 4D and Adobe illustrator</P>
 
             
-            <div class="m-col-start-3 m-col-end-11">
+            <div class="col-span-full m-col-start-3 m-col-end-11">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugit obcaecati temporibus autem ullam et sed iste voluptatem quae aperiam perferendis nisi id cum adipisci, reiciendis asperiores similique molestias. Est! </p>
             </div>
        
@@ -71,15 +83,15 @@
         <section class="grid-con work ">
             <h2 class="hidden">work images</h2>
 
-            <div class="line-separator m-col-start-3 m-col-end-11">
+            <div class="line-separator col-span-full m-col-start-3 m-col-end-11">
 
-            <div class="container m-col-start-3 m-col-end-11"></div>
+            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
 
-            <div class="container m-col-start-3 m-col-end-11"></div>
+            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
 
-            <div class="container m-col-start-3 m-col-end-11"></div>
+            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
 
-            <div class="container m-col-start-3 m-col-end-11"></div>
+            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
 
             </div>
 
@@ -94,7 +106,7 @@
 
         <section class="grid-con">
 
-        <div id="quicklinks" class="m-col-start-2 m-col-end-7">
+        <div id="quicklinks" class="col-start-1 col-end-3 m-col-start-2 m-col-end-7">
             <h3>QUICKLINKS</h3>
             <a href="home.html">HOME</a>
             <a href="projects.html">PROJECTS</a>
@@ -102,13 +114,13 @@
             <a href="contact.html">CONTACT</a>
         </div>
 
-        <div id="contact-info" class="m-col-start-7 m-col-end-12">
+        <div id="contact-info" class="col-start-3 col-end-5 m-col-start-7 m-col-end-12">
             <h3>CONTACT INFO</h3>
             <p>Email - sainiparam947@gmail.com</p>
             <p>Phone - 1234567890</p>
         </div>
 
-        <div class="m-col-start-2 m-col-end-12 line-separator"></div>
+        <div class="col-start-1 col-end-5 m-col-start-2 m-col-end-12 line-separator"></div>
         </div>
 
     </section>
@@ -116,14 +128,14 @@
     <section class="grid-con">
         <h2 class="hidden">lower footer</h2>
 
-        <div id="lower-footer" class="m-col-start-2 m-col-end-12">
+        <div id="lower-footer" class="col-start-1 col-end-5 m-col-start-2 m-col-end-12">
         <div id="icons" >
-            <ul>
+        
                 <a href="www.google.com"><li class="fa fa-facebook"></li></a>
                 <a href=""><li class="fa fa-linkedin"></li></a>
-                <a href=""></a><li class="fa fa-github"></li></a>
-                <a href=""></a><li class="fa fa-instagram"></li></a>
-            </ul>
+                <a href=""><li class="fa fa-github"></li></a>
+                <a href=""><li class="fa fa-instagram"></li></a>
+        
         </div>
 
         <div id="rights">

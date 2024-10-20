@@ -1,7 +1,7 @@
 @use '../abstracts' as a;
 
 #couple-resort-info p {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .work div {
@@ -16,4 +16,10 @@
 
 .next-project p {
     text-decoration: none;
+}
+
+@media(min-width: 768px){
+    #couple-resort-info p {
+        margin-top: 30px;
+    }
 }

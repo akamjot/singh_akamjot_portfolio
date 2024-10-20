@@ -1,0 +1,10 @@
+#projects .container{
+    height: 200px;
+}
+
+@media(min-width: 768px){
+    #projects .container{
+        height: 300px;
+    }
+
+}

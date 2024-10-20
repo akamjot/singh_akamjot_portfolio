@@ -29,17 +29,16 @@
 
 
 
-
-#icons {
-    left: 0;
-}
-
 #rights {
     text-align: right;
 }
 
 #lower-footer {
-    @include a.flex-space-between;
+    @include a.flex-end;
+}
+
+#icons {
+    margin-right: auto;
 }
 
 #icons a {
@@ -47,6 +46,7 @@
     text-decoration-color: none;
     color: a.$icon-color;
 }
+
 
 @media(min-width: 768px){
 
@@ -56,6 +56,6 @@
 
     .fa {
         font-size: 40px;
-        margin-right: 25px
+        margin-right: 25px;
     }
 }

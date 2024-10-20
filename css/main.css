@@ -26,7 +26,7 @@ p {
 
 h3 {
   color: white;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #intro h1 {
@@ -48,6 +48,9 @@ h3 {
   }
   p {
     font-size: 18px;
+  }
+  h3 {
+    font-size: 25px;
   }
 }
 nav {
@@ -73,6 +76,7 @@ nav a {
   align-items: center;
   text-decoration: none;
   color: var(--text-color);
+  font-size: 20px;
 }
 
 nav a:hover {
@@ -89,6 +93,19 @@ nav .home-link {
 
 .open-sidebar-button, .close-sidebar-button {
   display: none;
+}
+
+#logo {
+  height: 70px;
+}
+
+#mobile-logo {
+  display: none;
+}
+
+#mobile-logo {
+  height: 70px;
+  margin-right: auto;
 }
 
 @media (max-width: 768px) {
@@ -126,6 +143,13 @@ nav .home-link {
     left: 0;
     z-index: 9;
   }
+  #mobile-logo {
+    display: block;
+    margin-left: 20px;
+  }
+  #logo {
+    display: none;
+  }
 }
 #footer {
   background-color: #C0C0C0;
@@ -154,10 +178,6 @@ nav .home-link {
   text-align: right;
 }
 
-#icons {
-  left: 0;
-}
-
 #rights {
   text-align: right;
 }
@@ -165,7 +185,11 @@ nav .home-link {
 #lower-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
+}
+
+#icons {
+  margin-right: auto;
 }
 
 #icons a {
@@ -311,8 +335,17 @@ p span {
   margin-bottom: 250px;
 }
 
+#projects .container {
+  height: 200px;
+}
+
+@media (min-width: 768px) {
+  #projects .container {
+    height: 300px;
+  }
+}
 #couple-resort-info p {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .work div {
@@ -329,14 +362,35 @@ p span {
   text-decoration: none;
 }
 
+@media (min-width: 768px) {
+  #couple-resort-info p {
+    margin-top: 30px;
+  }
+}
 #billybeer-info p {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
+@media (min-width: 768px) {
+  #billybeer-info p {
+    margin-top: 30px;
+  }
+}
 #promo-video-info p {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
+@media (min-width: 768px) {
+  #promo-video-info p {
+    margin-top: 30px;
+  }
+}
 #industrynight-info p {
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  #industrynight-info p {
+    margin-top: 30px;
+  }
 }

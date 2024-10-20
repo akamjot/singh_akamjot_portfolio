@@ -11,3 +11,15 @@ My portfolio is going to be a multipage website that includes homepage, projects
 3. Cinema 4d - demo reel
 4. After affects - demo reel
 5. Visual Studio codes - coding
+
+# COMPUTER LANGUAGES USED
+
+1. HTML
+2. CSS
+3. SCSS
+4. JS
+
+# CREDITS 
+
+Youtube
+Professors

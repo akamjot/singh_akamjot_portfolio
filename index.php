@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php
+
+require_once('includes/connect.php');
+
+// query to run in SQL
+$query = 'SELECT * FROM `home` WHERE id=1';
+
+//query to get back the content
+$results = mysqli_query($connect,$query);
+
+$row = mysqli_fetch_assoc($results);
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akamjot Singh - Projects</title>
+    <title>Akamjot Singh</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid.css">
@@ -30,10 +44,10 @@
                 
 
                       <a class="home-link" href="home.html"><img src="images/logo.svg" alt="logo" id="logo"></a> 
-                      <a href="index.html">HOME</a> 
-                      <a href="projects.html">PROJECTS</a>
-                      <a href="aboutme.html">ABOUT ME</a>
-                      <a href="contact.html">CONTACT</a>
+                      <a href="index.php">HOME</a> 
+                      <a href="projects.php">PROJECTS</a>
+                      <a href="aboutme.php">ABOUT ME</a>
+                      <a href="contact.php">CONTACT</a>
                       
                     </div>
                 </nav>
@@ -42,63 +56,54 @@
                 </section>
 
         </div>
-    </header>
+    </header> 
 
     <main>
 
-        <section id="projects" class="grid-con">
+        <section id="intro" class="grid-con">
+            <div class="col-start-1 col-end-5 m-col-start-3 m-col-end-11">
+            <h2>Welcome to my portfolio.</h2>
+            <h1>Hi my name is <span>Akamjot Singh</span> but you can call me <span>AJ</span>.
+            </h1>
+            <p>I am a <span>UI/UX Designer, Graphic Designer, Frontend </span>and <span> Backend Developer</span></p>
+            </div>
+        </section>
 
-            <div class="col-span-full m-col-start-3 m-col-end-11 ">
-            <h2 class="line-separator">PROJECTS</h2>
+        <section id="demo-reel" class="grid-con">
+            <h2 class="hidden">demo reel</h2>
+            <div id="player-container" class=" col-start-1 col-end-5 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11">
+
+                <video controls preload="metadata" poster="images/placeholder.jpg">
+                    <source src="videos/<?php echo $row['video']; ?>" type="video/mp4">
+                <p>Your browser does not support the video tag.</p>
+                </video>
+                <div class="video-controls hidden" id="video-controls">
+                    <button id="play-button"><i class="fa fa-play-circle-o"></i></button>
+                    <button id="pause-button"><i class="fa fa-pause-circle-o"></i></button>
+                    <button id="stop-button"><i class="fa fa-stop-circle-o"></i></button>
+                    <i class="fa fa-volume-up"></i>
+                    <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+                    <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
+                </div>
+
             </div>
 
-            <a href="coupleresort.html" class="col-start-1 col-end-3 m-col-start-3 m-col-end-7">
-            <div class="container ">
-            </div>
-            </a>
+        </section>
 
-            <a href="billybeer.html" class="col-start-3 col-end-5 m-col-start-7 m-col-end-11">
-            <div class="container "></div>
-        </a>
-            
-            <div class="it is the heading of image one col-start-1 col-end-3 m-col-start-3 m-col-end-7">
-                <h3>COUPLE RESORT</h3>
-                <P>UX/UI Design</P>
-            </div>
+        <section id="bottom-links" class="grid-con">
+            <h2 class="hidden">links</h2>
 
-            <div class="heading of image two col-start-3 col-end-5 m-col-start-7 m-col-end-11 ">
-                <h3>BILLY BEER</h3>
-                <P>UX/UI Design, Web Development and 3D Design</P>
+            <div class="col-start-1 col-end-5 m-col-start-3 m-col-end-11 links">
+            <a href="projects.html">MY PROJECTS</a>
+            <a href="contact.html">CONTACT</a>
             </div>
-
-            <a href="promotionalvideo.html" class="col-start-1 col-end-3 m-col-start-3 m-col-end-7">
-            <div class="container ">
-            </div>
-        </a>
-        
-        <a href="industrynight.html" class="col-start-3 col-end-5 m-col-start-7 m-col-end-11">
-        <div class="container m-col-start-7 m-col-end-11"></div>
-    </a>
-
-            <div class="heading of image three col-start-1 col-end-3 m-col-start-3 m-col-end-7">
-                <h3>PROMOTIONAL VIDEO</h3>
-                <P>3D Design</P>
-            </div>
-            
-            <div class="heading of image four col-start-3 col-end-5 m-col-start-7 m-col-end-11">
-                <h3>INDUSTRY NIGHT</h3>
-                <P>UX/UI Design, Web Development and 3D Design</P>
-            </div>
-
- 
             
         </section>
 
 
 
-
     </main>
-    
+
     <footer id="footer">
 
         <section class="grid-con">
@@ -108,7 +113,7 @@
             <a href="home.html">HOME</a>
             <a href="projects.html">PROJECTS</a>
             <a href="aboutme.html">ABOUT ME</a>
-            <a href="contact.html">CONTACT</a>
+            <a href="contact.php">CONTACT</a>
         </div>
 
         <div id="contact-info" class="col-start-3 col-end-5 m-col-start-7 m-col-end-12">
@@ -143,5 +148,8 @@
     </section>
 
     </footer>
+    
+    <script src="js/main.js"></script> 
+
 </body>
 </html>

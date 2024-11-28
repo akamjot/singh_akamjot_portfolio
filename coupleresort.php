@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php
+require_once('includes/connect.php');
+
+$query = 'SELECT * FROM project_pages WHERE author_id = authors.id AND books.id ='.$_GET['id'];
+
+$results = mysqli_query($connect,$query);
+
+$row = mysqli_fetch_assoc($results);
+
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akamjot Singh - About me</title>
+    <title>projects-page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid.css">

@@ -7,4 +7,9 @@
         height: 300px;
     }
 
+    main section a {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

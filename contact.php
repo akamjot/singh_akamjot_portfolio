@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akamjot Singh</title>
+    <title>Akamjot Singh - About me</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid.css">
@@ -42,48 +44,47 @@
                 </section>
 
         </div>
-    </header> 
+    </header>
 
     <main>
 
-        <section id="intro" class="grid-con">
-            <div class="col-start-1 col-end-5 m-col-start-3 m-col-end-11">
-            <h2>Welcome to my portfolio.</h2>
-            <h1>Hi my name is <span>Akamjot Singh</span> but you can call me AJ.</h1>
-            <p>I am a <span>Graphic designer, UX/UI designer</span> and <span>Front end developer.</span></p>
-            </div>
-        </section>
+        <section id="contact" class="grid-con">
 
-        <section id="demo-reel" class="grid-con">
-            <h2 class="hidden">demo reel</h2>
-            <div id="player-container" class=" col-start-1 col-end-5 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11">
+            <div class=" col-span-full m-col-start-3 m-col-end-11">
+            <h2 class="line-separator">CONTACT</h2>
 
-                <video controls preload="metadata" poster="images/placeholder.jpg">
-                    <source src="videos/demo-reel.mp4" type="video/mp4">
-                <p>Your browser does not support the video tag.</p>
-                </video>
-                <div class="video-controls hidden" id="video-controls">
-                    <button id="play-button"><i class="fa fa-play-circle-o"></i></button>
-                    <button id="pause-button"><i class="fa fa-pause-circle-o"></i></button>
-                    <button id="stop-button"><i class="fa fa-stop-circle-o"></i></button>
-                    <i class="fa fa-volume-up"></i>
-                    <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
-                    <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section id="bottom-links" class="grid-con">
-            <h2 class="hidden">links</h2>
-
-            <div class="col-start-1 col-end-5 m-col-start-3 m-col-end-11 links">
-            <a href="projects.html">MY PROJECTS</a>
-            <a href="contact.html">CONTACT</a>
-            </div>
             
+            </div>
+
+
+            <div class="contact-container col-span-full m-col-start-3 m-col-end-11">
+
+                <div id="email">
+                <p>Email </p>
+                <p>sainiparam947@gmail.com</p>
+                </div>
+            
+                <div id="phone">
+                    <p>Phone</p>
+                    <p>1234567890</p>
+                </div>
+            
+            </div>
+
+            <div id="form" class="contact-container col-span-full m-col-start-3 m-col-end-11">
+
+                <form action="#" method="post" enctype="text/plain">
+                    <input name="first_name" type="text" required placeholder="First Name" id="first_name">
+                    <input name="last_name" type="text" required placeholder="Last Name" id="last_name">
+                    <input name="email" type="text" required placeholder="E-mail" id="email">
+                    <textarea name="msg" placeholder="Enter your message, comments or concerns here..." id="comments"></textarea>
+                    <input name="submit" type="submit" value="Submit">
+                </form>
+
+            </div>
+
         </section>
+
 
 
 
@@ -134,7 +135,5 @@
 
     </footer>
     
-    <script src="js/main.js"></script> 
-
 </body>
 </html>

@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<?php
+require_once('includes/connect.php');
+
+$query = 'SELECT * FROM `project_pages`';
+
+$results = mysqli_query($connect,$query);
+
+$row = mysqli_fetch_assoc($results);
+
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akamjot Singh - About me</title>
+    <title>Akamjot Singh - Projects</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid.css">
@@ -46,47 +58,39 @@
 
     <main>
 
-        <section id="contact" class="grid-con">
+   
 
-            <div class=" col-span-full m-col-start-3 m-col-end-11">
-            <h2 class="line-separator">CONTACT</h2>
+        <section id="projects" class="grid-con">
 
-            
+            <div class="col-span-full m-col-start-3 m-col-end-11 ">
+            <h2 class="line-separator">PROJECTS</h2>
             </div>
-
-
-            <div class="contact-container col-span-full m-col-start-3 m-col-end-11">
-
-                <div id="email">
-                <p>Email </p>
-                <p>sainiparam947@gmail.com</p>
-                </div>
+        </section>
             
-                <div id="phone">
-                    <p>Phone</p>
-                    <p>1234567890</p>
-                </div>
+    <?php
+    while($row = mysqli_fetch_array($results)){
+        echo'
+        <section class="grid-con">
+
+            <a href="coupleresort.php" class="col-span-full m-col-start-3 m-col-span-4">
+            <div class="container ">
+            </div>
+            <h3>'.$row['name'].'</h3>
+            <P>'.$row['category'].'</P>
+            </a>
+            </a>
+
+ 
             
-            </div>
-
-            <div id="form" class="contact-container col-span-full m-col-start-3 m-col-end-11">
-
-                <form action="#" method="post" enctype="text/plain">
-                    <input name="fullName" type="text" required placeholder="First & Last Name">
-                    <input name="email" type="text" required placeholder="E-mail">
-                    <textarea name="msg" placeholder="Enter your message, comments or concerns here..."></textarea>
-                    <input name="submit" type="submit" value="Submit">
-                </form>
-
-            </div>
-
         </section>
 
 
+    ';
 
+    }?>
 
     </main>
-
+    
     <footer id="footer">
 
         <section class="grid-con">
@@ -131,6 +135,5 @@
     </section>
 
     </footer>
-    
 </body>
 </html>

@@ -293,7 +293,7 @@ input[type=range]:focus {
 }
 
 body {
-  background-image: url(../../images/background.png);
+  background-image: url(../images/background.png);
   background-size: cover;
 }
 
@@ -401,6 +401,10 @@ p span {
 @media (min-width: 768px) {
   #projects .container {
     height: 300px;
+  }
+  main section a {
+    display: flex;
+    flex-direction: column;
   }
 }
 #couple-resort-info p {

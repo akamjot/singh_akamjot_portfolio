@@ -43,7 +43,7 @@ $row = mysqli_fetch_assoc($results);
                       </label>
                 
 
-                      <a class="home-link" href="home.html"><img src="images/logo.svg" alt="logo" id="logo"></a> 
+                      <a class="home-link" href="index.php"><img src="images/logo.svg" alt="logo" id="logo"></a> 
                       <a href="index.php">HOME</a> 
                       <a href="projects.php">PROJECTS</a>
                       <a href="aboutme.php">ABOUT ME</a>
@@ -94,8 +94,8 @@ $row = mysqli_fetch_assoc($results);
             <h2 class="hidden">links</h2>
 
             <div class="col-start-1 col-end-5 m-col-start-3 m-col-end-11 links">
-            <a href="projects.html">MY PROJECTS</a>
-            <a href="contact.html">CONTACT</a>
+            <a href="projects.php">MY PROJECTS</a>
+            <a href="contact.php">CONTACT</a>
             </div>
             
         </section>
@@ -110,9 +110,9 @@ $row = mysqli_fetch_assoc($results);
 
         <div id="quicklinks" class="col-start-1 col-end-3 m-col-start-2 m-col-end-7">
             <h3>QUICKLINKS</h3>
-            <a href="home.html">HOME</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="aboutme.html">ABOUT ME</a>
+            <a href="home.php">HOME</a>
+            <a href="projects.php">PROJECTS</a>
+            <a href="aboutme.php">ABOUT ME</a>
             <a href="contact.php">CONTACT</a>
         </div>
 

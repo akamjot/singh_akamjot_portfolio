@@ -29,11 +29,11 @@
                       </label>
                 
 
-                      <a class="home-link" href="home.html"><img src="images/logo.svg" alt="logo" id="logo"></a> 
-                      <a href="home.html">HOME</a> 
-                      <a href="projects.html">PROJECTS</a>
-                      <a href="aboutme.html">ABOUT ME</a>
-                      <a href="contact.html">CONTACT</a>
+                      <a class="home-link" href="index.php"><img src="images/logo.svg" alt="logo" id="logo"></a> 
+                      <a href="index.php">HOME</a> 
+                      <a href="projects.php">PROJECTS</a>
+                      <a href="aboutme.php">ABOUT ME</a>
+                      <a href="contact.php">CONTACT</a>
                       
                     </div>
                 </nav>
@@ -46,72 +46,16 @@
 
     <main>
 
-        <section id="billybeer" class="grid-con">
+        <section id="about-me" class="grid-con">
 
             <div class="col-span-full m-col-start-3 m-col-end-11">
-            <h2 class="line-separator">BILLY BEER</h2>
+            <h2 class="line-separator">ABOUT ME</h2>
+
+            <p>My name is Akamjot Singh but you can call me AJ. I am a graphic designer, UX/UI designer & front-end web developer. In my free time i love playing video games and currently the game i like most is Valorant. I am aways curious to know more about new technologies and software. </p>
             </div>
-
-            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
-
-
-        </section>
-
-        <section id="billybeer-info" class="grid-con">
-
-            
-                <h3 class="col-start-1 col-end-3 m-col-start-3 m-col-end-5">CATEGORY</h3>
-                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11">UX/UI Design, 3D Designing, Logo & Label Designing</P>
-
-     
-                <h3 class="col-start-1 col-end-3 m-col-start-3 m-col-end-5">YEAR</h3>
-                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11">2023</P>
-
-
-
-                <h3 class="col-start-1 col-end-3 m-col-start-3 m-col-end-5">SOFTWARE</h3>
-                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11">Adobe XD, Visual Studio, Cinema 4D and Adobe illustrator</P>
-
-            
-            <div class="col-span-full m-col-start-3 m-col-end-11">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugit obcaecati temporibus autem ullam et sed iste voluptatem quae aperiam perferendis nisi id cum adipisci, reiciendis asperiores similique molestias. Est! </p>
-            </div>
-       
-
-        </section>
-
-        <section class="grid-con work ">
-            <h2 class="hidden">work images</h2>
-
-            <div class="line-separator col-span-full m-col-start-3 m-col-end-11">
-
-            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
-
-            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
-
-            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
-
-            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
-
-            </div>
-
         </section>
 
 
-    <a href="promotionalvideo.html">
-        <section class="grid-con">
-            
-            <div class="col-span-full m-col-start-3 m-col-end-11 next-project">
-      
-            <p>NEXT <br> PROJECT</p>
-
-            <img src="images/next-project.svg" alt="next-project button">
-
-            </div>
-
-        
-        </section>
-    </a>
 
 
     </main>
@@ -122,10 +66,10 @@
 
         <div id="quicklinks" class="col-start-1 col-end-3 m-col-start-2 m-col-end-7">
             <h3>QUICKLINKS</h3>
-            <a href="index.html">HOME</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="aboutme.html">ABOUT ME</a>
-            <a href="contact.html">CONTACT</a>
+            <a href="index.php">HOME</a>
+            <a href="projects.php">PROJECTS</a>
+            <a href="aboutme.php">ABOUT ME</a>
+            <a href="contact.php">CONTACT</a>
         </div>
 
         <div id="contact-info" class="col-start-3 col-end-5 m-col-start-7 m-col-end-12">

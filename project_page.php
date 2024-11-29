@@ -4,7 +4,7 @@
 <?php
 require_once('includes/connect.php');
 
-$query = 'SELECT * FROM project_pages WHERE author_id = authors.id AND books.id ='.$_GET['id'];
+$query = 'SELECT * FROM project_pages WHERE id = '.$_GET['id'];
 
 $results = mysqli_query($connect,$query);
 
@@ -41,11 +41,11 @@ $row = mysqli_fetch_assoc($results);
                       </label>
                 
 
-                      <a class="home-link" href="home.html"><img src="images/logo.svg" alt="logo" id="logo"></a> 
-                      <a href="home.html">HOME</a> 
-                      <a href="projects.html">PROJECTS</a>
-                      <a href="aboutme.html">ABOUT ME</a>
-                      <a href="contact.html">CONTACT</a>
+                      <a class="home-link" href="index.php"><img src="images/logo.svg" alt="logo" id="logo"></a> 
+                      <a href="home.php">HOME</a> 
+                      <a href="projects.php">PROJECTS</a>
+                      <a href="aboutme.php">ABOUT ME</a>
+                      <a href="contact.php">CONTACT</a>
                       
                     </div>
                 </nav>
@@ -61,7 +61,7 @@ $row = mysqli_fetch_assoc($results);
         <section id="couple-resort" class="grid-con">
 
             <div class="col-span-full m-col-start-3 m-col-end-11">
-            <h2 class="line-separator">COUPLE RESORT</h2>
+            <h2 class="line-separator"><?php echo $row['name']; ?></h2>
             </div>
 
             <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
@@ -73,20 +73,20 @@ $row = mysqli_fetch_assoc($results);
 
 
                 <h3 class="col-start-1 col-end-3 m-col-start-3 m-col-end-5">CATEGORY</h3>
-                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11">UX/UI Design</P>
+                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11"><?php echo $row['category']; ?></P>
 
 
                 <h3 class="col-start-1 col-end-3 m-col-start-3 m-col-end-5">YEAR</h3>
-                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11">2023</P>
+                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11"><?php echo $row['year']; ?></P>
 
 
           
                 <h3 class="col-start-1 col-end-3 m-col-start-3 m-col-end-5">SOFTWARE</h3>
-                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11">Adobe XD</P>
+                <P class="col-start-3 col-end-5 m-col-start-6 m-col-end-11"><?php echo $row['software']; ?></P>
 
             
             <div class="col-span-full m-col-start-3 m-col-end-11">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugit obcaecati temporibus autem ullam et sed iste voluptatem quae aperiam perferendis nisi id cum adipisci, reiciendis asperiores similique molestias. Est! </p>
+            <p><?php echo $row['description']; ?></p>
             </div>
        
 
@@ -97,20 +97,24 @@ $row = mysqli_fetch_assoc($results);
 
             <div class="line-separator col-span-full m-col-start-3 m-col-end-11">
 
+            <?php
+
+            while($row = mysqli_fetch_array($results)){
+
+            echo'
+            
             <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
 
-            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
+            ';
 
-            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
-
-            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
+            }?>
 
             </div>
 
         </section>
 
 
-    <a href="billybeer.html">
+    <a href="projects.php">
         <section class="grid-con">
             
             <div class="col-span-full m-col-start-3 m-col-end-11 next-project">
@@ -134,10 +138,10 @@ $row = mysqli_fetch_assoc($results);
 
         <div id="quicklinks" class="col-start-1 col-end-3 m-col-start-2 m-col-end-7">
             <h3>QUICKLINKS</h3>
-            <a href="index.html">HOME</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="aboutme.html">ABOUT ME</a>
-            <a href="contact.html">CONTACT</a>
+            <a href="index.php">HOME</a>
+            <a href="projects.php">PROJECTS</a>
+            <a href="aboutme.php">ABOUT ME</a>
+            <a href="contact.php">CONTACT</a>
         </div>
 
         <div id="contact-info" class="col-start-3 col-end-5 m-col-start-7 m-col-end-12">

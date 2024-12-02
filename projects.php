@@ -4,11 +4,9 @@
 <?php
 require_once('includes/connect.php');
 
-$query = 'SELECT * FROM `project_pages` where id < 5';
+$query = 'SELECT * FROM project_pages where id < 5';
 
 $results = mysqli_query($connect,$query);
-
-$row = mysqli_fetch_assoc($results);
 
 ?>
 

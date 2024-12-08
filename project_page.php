@@ -24,8 +24,7 @@ $row = mysqli_fetch_assoc($results);
     <header>
         <div class="sticky-nav-con">
             <section id="main-header"> 
-                <h2 class="hidden">hel
-                </h2>
+                <h2 class="hidden">hello</h2>
                 
                 <nav>
                     <img src="images/logo.svg" alt="logo for mobile" id="mobile-logo">
@@ -64,7 +63,9 @@ $row = mysqli_fetch_assoc($results);
             <h2 class="line-separator"><?php echo $row['name']; ?></h2>
             </div>
 
-            <div class="container col-span-full m-col-start-3 m-col-end-11"></div>
+            <div class="col-span-full m-col-start-3 m-col-end-11">
+                <img src="images/<?php echo $row['photo']; ?>" alt="main_image">
+            </div>
 
 
         </section>

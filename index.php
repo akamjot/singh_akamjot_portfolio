@@ -74,7 +74,7 @@ $row = mysqli_fetch_assoc($results);
             <h2 class="hidden">demo reel</h2>
             <div id="player-container" class=" col-start-1 col-end-5 m-col-start-3 m-col-end-11 l-col-start-3 l-col-end-11">
 
-                <video controls preload="metadata" poster="images/placeholder.jpg">
+                <video controls preload="metadata" poster="images/thumbnail.png">
                     <source src="videos/<?php echo $row['video']; ?>" type="video/mp4">
                 <p>Your browser does not support the video tag.</p>
                 </video>

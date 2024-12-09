@@ -82,9 +82,11 @@
 window.addEventListener('DOMContentLoaded', () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const paragraphs = document.querySelectorAll('.project-info p, .intro p');
+  const paragraphs = document.querySelectorAll('.project-info p,  .intro p, .intro h2, .intro h1');
 
-  const images = document.querySelectorAll('.work img');
+  const headers = document.querySelectorAll('.sticky-nav-con');
+
+  const headings = document.querySelectorAll('.heading h2');
 
 
   paragraphs.forEach((paragraph) => {
@@ -102,10 +104,25 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  images.forEach((image) => {
-      gsap.from(image, {
+  headers.forEach((header) => {
+      gsap.from(header, {
         duration: 1,
-        x: -200,
+        y: 200,
+        autoAlpha: 0,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: image,
+          start: 'top 80%',
+          end: 'top 20%',
+          toggleActions: 'play none none none',
+        }
+      });
+    });
+
+    headings.forEach((heading) => {
+      gsap.from(heading, {
+        duration: 1,
+        y: 200,
         autoAlpha: 0,
         ease: 'power2.out',
         scrollTrigger: {

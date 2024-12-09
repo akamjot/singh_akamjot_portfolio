@@ -2,8 +2,13 @@
 @use '../abstracts/variables' as v;
 
 //i can use any variable in the variable namespace
+
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: v.$body-font-family;
+    
 }
 
 h2 {
@@ -26,7 +31,7 @@ h3 {
     font-size: 20px;
 }
 
-#intro h1 {
+.intro h1 {
     margin-bottom: 10px;
     color: v.$body-text-color;
 
@@ -37,7 +42,7 @@ h3 {
     
 }
 
-#intro span {
+.intro span {
     color: #FF0000;
 }
 

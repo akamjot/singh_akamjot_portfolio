@@ -39,13 +39,13 @@ if(empty($errors)) {
 
     //insert these values as a new row in the contacts table
 
-    $query = "INSERT INTO contact (fname, lname, email, comments) VALUES('.$lname.','.$fname.','.$email.','.$msg.')";
+    $query = "INSERT INTO contact (`id`, `first_name`, `last_name`, `email`, `comments`) VALUES (NULL, '$fname', '$lname', '$email', '$msg');";
 
     if(mysqli_query($connect, $query)) {
 
 //format and send these values in an email
 
-$to = 'sainiparam947@gmail.com';
+$to = 'rhaaf@fanshawec.ca';
 $subject = 'Message from your Portfolio site!';
 
 $message = "You have received a new contact form submission:\n\n";
@@ -55,7 +55,7 @@ $message .= "Email: ".$email."\n\n";
 
 mail($to,$subject,$message);
 
-header('Location: index.php');
+header('Location: ../contact.php');
 
 }else{
     for($i=0; $i < count($errors); $i++) {

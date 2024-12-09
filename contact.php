@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,13 +72,31 @@
 
             <div id="form" class="contact-container col-span-full m-col-start-3 m-col-end-11">
 
-                <form action="#" method="post" enctype="text/plain">
-                    <input name="first_name" type="text" required placeholder="First Name" id="first_name">
-                    <input name="last_name" type="text" required placeholder="Last Name" id="last_name">
-                    <input name="email" type="text" required placeholder="E-mail" id="email">
-                    <textarea name="msg" placeholder="Enter your message, comments or concerns here..." id="comments"></textarea>
-                    <input name="submit" type="submit" value="Submit">
-                </form>
+    
+
+                <form method="post" action="includes/send_mail.php">
+
+                <label for="first_name"></label>
+                <input type="text" name="first_name" required placeholder="First Name" id="first_name">
+
+         
+
+                <label for="last_name"></label>
+                <input type="text" name="last_name" required placeholder="Last Name" id="last_name">
+
+               
+
+                <label for="email"></label>
+                <input type="text" name="email" required placeholder="E-mail" id="email">
+
+            
+
+                <label for="comments"></label>
+                <textarea name="comments" placeholder="Enter your message, comments or concerns here..."  id="comments"></textarea>
+           
+
+                <input type="submit" value="send">
+            </form>
 
             </div>
 

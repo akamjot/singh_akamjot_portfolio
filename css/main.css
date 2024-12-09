@@ -26,6 +26,7 @@ p {
   margin-bottom: 20px;
   color: white;
   font-size: 15px;
+  font-weight: 100;
 }
 
 h3 {
@@ -84,7 +85,9 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--accent-color);
+  color: red;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.2);
 }
 
 nav .home-link {
@@ -178,6 +181,11 @@ nav .home-link {
   font-size: 15px;
 }
 
+#quicklinks a:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
 #contact-info {
   text-align: right;
 }
@@ -199,7 +207,10 @@ nav .home-link {
 #icons a {
   text-decoration: none;
   text-decoration-color: none;
-  color: #000000;
+}
+
+#icons li {
+  color: black;
 }
 
 @media (min-width: 768px) {
@@ -399,7 +410,7 @@ p span {
 }
 
 #projects img {
-  height: 200px;
+  height: 250px;
 }
 
 .project-card {

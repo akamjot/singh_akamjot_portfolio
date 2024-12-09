@@ -23,6 +23,12 @@
     font-size: 15px;
 }
 
+#quicklinks a:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+
 #contact-info {
     text-align: right;
 }
@@ -44,7 +50,11 @@
 #icons a {
     text-decoration: none;
     text-decoration-color: none;
-    color: a.$icon-color;
+   
+}
+
+#icons li {
+    color: black;
 }
 
 

@@ -410,7 +410,11 @@ p span {
 }
 
 #projects img {
-  height: 250px;
+  height: 150px;
+}
+
+.project-card a {
+  text-decoration: none;
 }
 
 .project-card {
@@ -433,8 +437,8 @@ p span {
 }
 
 @media (min-width: 768px) {
-  #projects .container {
-    height: 300px;
+  #projects img {
+    height: 250px;
   }
   main section a {
     display: flex;

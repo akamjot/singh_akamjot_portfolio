@@ -51,7 +51,8 @@
             <div class="col-span-full m-col-start-3 m-col-end-11">
             <h2 class="line-separator">ABOUT ME</h2>
 
-            <p>My name is Akamjot Singh but you can call me AJ. I am a graphic designer, UX/UI designer & front-end web developer. In my free time i love playing video games and currently the game i like most is Valorant. I am aways curious to know more about new technologies and software. </p>
+            <p>
+            Hi, I’m Akamjot Singh, but feel free to call me AJ! I’m a graphic designer, UX/UI designer, and front-end web developer who loves creating visually stunning and user-friendly experiences. When I’m not designing or coding, you’ll probably find me playing Valorant, my favorite game at the moment. I’m also a bit of a tech enthusiast—I love exploring new software and staying updated on the latest technologies. For me, it’s all about learning, growing, and creating something amazing every day. </p>
             </div>
         </section>
 

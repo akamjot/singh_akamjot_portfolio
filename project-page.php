@@ -53,7 +53,7 @@ $imageResults = mysqli_query($connect, $imageQuery);
 
     <main>
 
-        <section  class="grid-con">
+        <section  class="grid-con heading">
             <div class="col-span-full m-col-start-3 m-col-end-11">
                 <h2 class="line-separator"><?php echo $row['name']; ?></h2>
             </div>
@@ -147,7 +147,6 @@ $imageResults = mysqli_query($connect, $imageQuery);
     </footer>0
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="js/main.js"></script> 
     
 </body>

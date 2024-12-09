@@ -4,6 +4,10 @@
   font-style: normal;
   src: url("../fonts/cantarell_regular-webfont.woff") format("woff"), url("../fonts/cantarell_regular-webfont.woff2") format("woff2");
 }
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Orbitron", arial, sans-serif;
 }
@@ -29,7 +33,7 @@ h3 {
   font-size: 20px;
 }
 
-#intro h1 {
+.intro h1 {
   margin-bottom: 10px;
   color: white;
 }
@@ -38,7 +42,7 @@ h3 {
   color: white;
 }
 
-#intro span {
+.intro span {
   color: #FF0000;
 }
 
@@ -297,11 +301,11 @@ body {
   background-size: cover;
 }
 
-#intro {
+.intro {
   text-align: center;
 }
 
-#intro h1 {
+.intro h1 {
   font-size: 25px;
 }
 
@@ -327,7 +331,7 @@ p span {
   #bottom-links {
     margin: 50px 100px;
   }
-  #intro h1 {
+  .intro h1 {
     font-size: 35px;
   }
   h1 span {
@@ -394,8 +398,27 @@ p span {
   margin-bottom: 250px;
 }
 
-#projects .container {
+#projects img {
   height: 200px;
+}
+
+.project-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin: 10px 0 5px;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -407,7 +430,7 @@ p span {
     flex-direction: column;
   }
 }
-#couple-resort-info p {
+.project-info p {
   margin-top: 20px;
 }
 
@@ -427,33 +450,6 @@ p span {
 
 @media (min-width: 768px) {
   #couple-resort-info p {
-    margin-top: 30px;
-  }
-}
-#billybeer-info p {
-  margin-top: 20px;
-}
-
-@media (min-width: 768px) {
-  #billybeer-info p {
-    margin-top: 30px;
-  }
-}
-#promo-video-info p {
-  margin-top: 20px;
-}
-
-@media (min-width: 768px) {
-  #promo-video-info p {
-    margin-top: 30px;
-  }
-}
-#industrynight-info p {
-  margin-top: 20px;
-}
-
-@media (min-width: 768px) {
-  #industrynight-info p {
     margin-top: 30px;
   }
 }

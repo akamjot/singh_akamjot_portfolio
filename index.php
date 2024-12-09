@@ -21,6 +21,7 @@ $row = mysqli_fetch_assoc($results);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/grid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
 </head>
 <body>
     <header>
@@ -60,7 +61,7 @@ $row = mysqli_fetch_assoc($results);
 
     <main>
 
-        <section id="intro" class="grid-con">
+        <section class="grid-con intro">
             <div class="col-start-1 col-end-5 m-col-start-3 m-col-end-11">
             <h2>Welcome to my portfolio.</h2>
             <h1>Hi my name is <span>Akamjot Singh</span> but you can call me <span>AJ</span>.
@@ -150,6 +151,8 @@ $row = mysqli_fetch_assoc($results);
     </footer>
     
     <script src="js/main.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,25 @@
+@use '../abstracts' as a;
+
+.project-info p {
+    margin-top: 20px;
+}
+
+.work div {
+    margin-top: 40px;
+
+}
+
+.next-project {
+    @include a.flex-space-between;
+    
+}
+
+.next-project p {
+    text-decoration: none;
+}
+
+@media(min-width: 768px){
+    #couple-resort-info p {
+        margin-top: 30px;
+    }
+}

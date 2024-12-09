@@ -2,7 +2,7 @@
 
 
 
-    // Select elements here
+   
     const playerCon = document.querySelector('#player-container');
     const player = document.querySelector('video');
     const videoControls = document.querySelector('#video-controls');
@@ -12,12 +12,12 @@
     const volumeSlider = document.querySelector("#change-vol");
     const fullScreen = document.querySelector("#full-screen");
     
-    // if JS is loaded then, remove default video controls and show custom controls
+   
     player.controls = false;
     videoControls.classList.remove('hidden');
     
     
-    // Basic Video controls, similar to what we have done with audio
+  
     function playVideo() {
         player.play();
     }
@@ -77,5 +77,45 @@
     player.addEventListener('mouseenter', showControls);
     player.addEventListener('mouseleave', hideControls);
     
-    
-    })();
+// Animations
+
+window.addEventListener('DOMContentLoaded', () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const paragraphs = document.querySelectorAll('.project-info p, .intro p');
+
+  const images = document.querySelectorAll('.work img');
+
+
+  paragraphs.forEach((paragraph) => {
+    gsap.from(paragraph, {
+      duration: 1,
+      x: 200,
+      autoAlpha: 0,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: paragraph,
+        start: 'top 80%',
+        end: 'top 20%',
+        toggleActions: 'play none none none',
+      }
+    });
+  });
+
+  images.forEach((image) => {
+      gsap.from(image, {
+        duration: 1,
+        x: -200,
+        autoAlpha: 0,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: image,
+          start: 'top 80%',
+          end: 'top 20%',
+          toggleActions: 'play none none none',
+        }
+      });
+    });
+});
+   
+})();

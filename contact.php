@@ -134,6 +134,8 @@
     </section>
 
     </footer>
+    <script src="js/main.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     
 </body>
 </html>

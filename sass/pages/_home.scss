@@ -7,11 +7,11 @@ body {
     background-size: cover;
 }
 
-#intro {
+.intro {
     text-align: center;
 }
 
-#intro h1 {
+.intro h1 {
     font-size: 25px;
 }
 
@@ -40,7 +40,7 @@ p span {
         margin: 50px 100px;
     }
 
-    #intro h1 {
+    .intro h1 {
         font-size: 35px;
     }
 

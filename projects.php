@@ -4,7 +4,7 @@
 <?php
 require_once('includes/connect.php');
 
-$query = 'SELECT * FROM project_pages where id < 5';
+$query = 'SELECT id, name, category, year, software, photo AS images FROM project_pages where id < 5';
 
 $results = mysqli_query($connect,$query);
 
@@ -56,38 +56,49 @@ $results = mysqli_query($connect,$query);
 
     <main>
 
-   
 
-        <section id="projects" class="grid-con">
-
-            <div class="col-span-full m-col-start-3 m-col-end-11 ">
-            <h2 class="line-separator">PROJECTS</h2>
-            </div>
-        </section>
             
+    <section id="projects" class="grid-con">
+    <div class="col-span-full m-col-start-3 m-col-end-11">
+        <h2 class="line-separator">PROJECTS</h2>
+    </div>
+
     <?php
-
-    while($row = mysqli_fetch_array($results)){
-
-        echo'
-        <section class="grid-con">
-
-            <a href="project_page.php?id='.$row['id'].'" class="col-span-full m-col-start-3 m-col-span-4">
-            <div class="container ">
-            </div>
-            <h3>'.$row['name'].'</h3>
-            <P>'.$row['category'].'</P>
-            </a>
-            </a>
-
- 
+    $count = 0; 
+    while ($row = mysqli_fetch_assoc($results)) {
+        $image_array = explode(',', $row['images']);
+        foreach ($image_array as $image) {
             
-        </section>
+            if ($count == 0 || $count == 2) {
+                echo '
+                <div class="col-span-2 m-col-span-4 m-col-start-3">
+                    <div class="project-card">
+                        <a href="project-page.php?id=' . $row['id'] . '">
+                            <img src="images/' . $image . '" alt="' . $row['name'] . ' project">
+                            <h3>' . $row['name'] . '</h3>
+                            <p>' . $row['category'] . '</p>
+                        </a>
+                    </div>
+                </div>';
+            } else {
+              
+                echo '
+                <div class="col-span-2 m-col-span-4">
+                    <div class="project-card">
+                        <a href="project-page.php?id=' . $row['id'] . '">
+                            <img src="images/' . $image . '" alt="' . $row['name'] . ' project">
+                            <h3>' . $row['name'] . '</h3>
+                            <p>' . $row['category'] . '</p>
+                        </a>
+                    </div>
+                </div>';
+            }
+            $count++; 
+        }
+    }
+    ?>
+</section>
 
-
-    ';
-
-    }?>
 
     </main>
     
@@ -135,5 +146,7 @@ $results = mysqli_query($connect,$query);
     </section>
 
     </footer>
+    <script src="js/main.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 </body>
 </html>

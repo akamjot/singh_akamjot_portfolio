@@ -1,5 +1,29 @@
-#projects .container{
+
+
+#projects img {
     height: 200px;
+}
+
+
+.project-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+
+
+.project-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #ffffff;
 }
 
 @media(min-width: 768px){

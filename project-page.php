@@ -4,12 +4,21 @@
 <?php
 require_once('includes/connect.php');
 
-$query = 'SELECT * FROM project_pages WHERE project_pages.id = ' . $_GET['id'];
-$results = mysqli_query($connect, $query);
-$row = mysqli_fetch_assoc($results);
+$query = 'SELECT * FROM project_pages WHERE id = :project_id';
+$stmt = $connect->prepare($query);
+$project_id = $_GET['id'];
+$stmt->bindParam(':project_id', $project_id, PDO::PARAM_INT);
+$stmt->execute();
 
-$imageQuery = 'SELECT * FROM images WHERE project_page_id = ' . $_GET['id'];
-$imageResults = mysqli_query($connect, $imageQuery);
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+$stmt = null;
+
+$imageQuery = 'SELECT * FROM images WHERE project_page_id = :project_id';
+$imageStmt = $connect->prepare($imageQuery);
+$imageStmt->bindParam(':project_id', $project_id, PDO::PARAM_INT);
+$imageStmt->execute();
+$imageResults = $imageStmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <head>
@@ -85,7 +94,7 @@ $imageResults = mysqli_query($connect, $imageQuery);
             </video>
                 <?php
 
-                while ($imageRow = mysqli_fetch_assoc($imageResults)) {
+                foreach ($imageResults as $imageRow) {
                     echo '
                     <div class="project-images col-span-full m-col-start-3 m-col-end-11">
                         <img src="images/' . $imageRow['project_image'] . '" alt="project-images">

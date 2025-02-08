@@ -4,9 +4,13 @@
 <?php
 require_once('includes/connect.php');
 
-$query = 'SELECT id, name, category, year, software, photo AS images FROM project_pages where id < 5';
+// $query = 'SELECT id, name, category, year, software, photo AS images FROM project_pages where id < 5';
 
-$results = mysqli_query($connect,$query);
+// $results = mysqli_query($connect,$query);
+
+$stmt = $connect->prepare("SELECT id, name, category, year, software, photo AS images FROM project_pages where id < 5");
+
+$stmt->execute();
 
 ?>
 
@@ -65,7 +69,7 @@ $results = mysqli_query($connect,$query);
 
     <?php
     $count = 0; 
-    while ($row = mysqli_fetch_assoc($results)) {
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $image_array = explode(',', $row['images']);
         foreach ($image_array as $image) {
             

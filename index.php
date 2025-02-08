@@ -6,12 +6,16 @@
 require_once('includes/connect.php');
 
 // query to run in SQL
-$query = 'SELECT * FROM `home` WHERE id=1';
+// $query = 'SELECT * FROM `home` WHERE id=1';
 
 //query to get back the content
-$results = mysqli_query($connect,$query);
+// $results = mysqli_query($connect,$query);
 
-$row = mysqli_fetch_assoc($results);
+$stmt = $connect->prepare("SELECT * FROM `home` WHERE id=1");
+
+$stmt->execute();
+
+$row = $stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <head>

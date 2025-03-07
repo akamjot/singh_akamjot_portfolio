@@ -405,6 +405,10 @@ p span {
   border-radius: 0;
 }
 
+#form p {
+  margin-left: 30px;
+}
+
 #about-me {
   margin-bottom: 250px;
 }

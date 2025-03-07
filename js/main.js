@@ -12,6 +12,7 @@
     const volumeSlider = document.querySelector("#change-vol");
     const fullScreen = document.querySelector("#full-screen");
     
+    
    
     player.controls = false;
     videoControls.classList.remove('hidden');
@@ -134,5 +135,67 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
-   
+
+
+(() => {
+  const form = document.querySelector("#Contactform");
+  const feedback = document.querySelector("#feedback");
+
+  function regForm(event) {
+      event.preventDefault();
+      const thisform = event.currentTarget;
+      const url = "contact.php";
+      const formdata = 
+          "last_name=" + thisform.elements.last_name.value +
+          "&first_name=" + thisform.elements.first_name.value +
+          "&email=" + thisform.elements.email.value +
+          "&comments=" + thisform.elements.comments.value;
+
+      console.log(formdata);
+      fetch(url, {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: formdata
+      })
+      .then(response => response.json())
+      .then(response => {
+          console.log(response); // Logs the response object
+
+          // Clear previous feedback
+          feedback.innerHTML = "";
+
+          // Check if there are any errors
+          if (response.errors) {
+              response.errors.forEach(error => {
+                  const errorElement = document.createElement("p");
+                  errorElement.textContent = error;
+                  feedback.appendChild(errorElement);
+              });
+          } else {
+              // If no errors, display success message
+              const successElement = document.createElement("p");
+              successElement.textContent = response.message; // Display the success message
+              feedback.appendChild(successElement);
+          }
+
+          // Scroll the feedback section into view
+          feedback.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      })
+      .catch(error => {
+          console.log(error);
+          feedback.innerHTML = "<p>Sorry, there seems to be an issue. Please try again later.</p>";
+      });
+  }
+
+  form.addEventListener("submit", regForm);
 })();
+
+
+
+
+
+
+})();
+   

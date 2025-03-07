@@ -70,35 +70,34 @@
             
             </div>
 
-            <div id="form" class="contact-container col-span-full m-col-start-3 m-col-end-11">
+                <div id="form" class="contact-container col-span-full m-col-start-3 m-col-end-11">
 
-    
+        
 
-                <form method="post" action="includes/send_mail.php">
+                <form id="Contactform" method="post" action="includes/sendmail.php">
+   <label for="first_name"></label>
+   <input type="text" name="first_name" required placeholder="First Name" id="first_name">
 
-                <label for="first_name"></label>
-                <input type="text" name="first_name" required placeholder="First Name" id="first_name">
+   <label for="last_name"></label>
+   <input type="text" name="last_name" required placeholder="Last Name" id="last_name">
 
-         
+   <label for="email"></label>
+   <input type="email" name="email" required placeholder="E-mail" id="email">
 
-                <label for="last_name"></label>
-                <input type="text" name="last_name" required placeholder="Last Name" id="last_name">
+   <label for="comments"></label>
+   <textarea name="comments" placeholder="Enter your message, comments or concerns here..." id="comments"></textarea>
 
-               
+   <input type="submit" value="send">
+   
+</form>
 
-                <label for="email"></label>
-                <input type="text" name="email" required placeholder="E-mail" id="email">
+<section id="feedback">
+    <p>*Please fill out all required sections</p>
+</section>
+
+                </div>
 
             
-
-                <label for="comments"></label>
-                <textarea name="comments" placeholder="Enter your message, comments or concerns here..."  id="comments"></textarea>
-           
-
-                <input type="submit" value="send">
-            </form>
-
-            </div>
 
         </section>
 

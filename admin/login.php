@@ -1,5 +1,6 @@
 <?php
 require_once('../includes/connect.php');
+
 $query = 'SELECT * FROM user WHERE username = ? password = ?';
 $stmt = $connection->prepare($query);
 $stmt->bindParam(1, $_POST['username'], PDO::PARAM_STR);

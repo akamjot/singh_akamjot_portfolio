@@ -15,7 +15,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: portfolio
@@ -30,12 +30,12 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS contact;
 CREATE TABLE IF NOT EXISTS contact (
   id int UNSIGNED NOT NULL AUTO_INCREMENT,
-  first_name varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  last_name varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  first_name varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  last_name varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   email varchar(250) NOT NULL,
-  comments varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  comments varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -48,7 +48,7 @@ CREATE TABLE IF NOT EXISTS home (
   id int UNSIGNED NOT NULL AUTO_INCREMENT,
   video varchar(100) NOT NULL,
   PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table home
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS images (
   project_image varchar(500) NOT NULL,
   video varchar(50) NOT NULL,
   PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table images
@@ -103,14 +103,14 @@ INSERT INTO images (id, project_page_id, project_image, video) VALUES
 DROP TABLE IF EXISTS project_pages;
 CREATE TABLE IF NOT EXISTS project_pages (
   id int UNSIGNED NOT NULL AUTO_INCREMENT,
-  name varchar(300) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  name varchar(300) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   photo varchar(75) NOT NULL,
-  category varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  category varchar(500) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   year int UNSIGNED NOT NULL,
   software varchar(500) NOT NULL,
   description varchar(500) NOT NULL,
   PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table project_pages

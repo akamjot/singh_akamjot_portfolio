@@ -4,7 +4,7 @@ require_once('../includes/connect.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Generate a unique, web-safe name for the image
     $random = rand(10000, 99999);
-    $newname = 'image' . $random;
+    $newname = 'photo' . $random;
 
     // Get the file extension
     $filetype = strtolower(pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION));
@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Check file size (500KB limit)
-    if ($_FILES['img']['size'] > 500000) {
+    if ($_FILES['img']['size'] > 5000000) {
         die('Sorry, your file is too large.');
     }
 
@@ -30,8 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Move the file and insert into the database
     if (move_uploaded_file($_FILES['img']['tmp_name'], $target_file)) {
         // PDO database insert with all required columns
-        $query = "INSERT INTO projects (name, image, description, challeges, solution) VALUES (?, ?, ?, ?, ?)";
-        $stmt = $connection->prepare($query);
+        $query = "INSERT INTO project_pages (name, photo, description, category, software) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $connect->prepare($query);
 
         // Form data
         $title = trim($_POST['title']);
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         try {
             $stmt->execute();
-            $lastid = $connection->lastInsertId();
+            $lastid = $connect->lastInsertId();
             echo "Project added with ID: " . $lastid; // Optional: for debugging
             header('Location: project_list.php');
             exit();

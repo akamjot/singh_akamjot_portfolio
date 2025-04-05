@@ -113,10 +113,10 @@
         <div id="lower-footer" class="col-start-1 col-end-5 m-col-start-2 m-col-end-12">
         <div id="icons" >
         
-                <a href="www.google.com"><li class="fa fa-facebook"></li></a>
-                <a href=""><li class="fa fa-linkedin"></li></a>
-                <a href=""><li class="fa fa-github"></li></a>
-                <a href=""><li class="fa fa-instagram"></li></a>
+        <a href="https://www.facebook.com/akamjot.singh.771/"><li class="fa fa-facebook"></li></a>
+                <a href="https://www.linkedin.com/in/akamjot-singh-6b4889297/"><li class="fa fa-linkedin"></li></a>
+                <a href="https://github.com/akamjot"><li class="fa fa-github"></li></a>
+                <a href="https://www.instagram.com/akamjot_01/"><li class="fa fa-instagram"></li></a>
         
         </div>
 

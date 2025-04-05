@@ -105,6 +105,16 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
             
         </section>
 
+        <section id="resume-section" class="grid-con">
+        <div class="col-start-1 col-end-5 m-col-start-3 m-col-end-11 resume-box">
+            <h2>My Resume</h2>
+            <p>You can view or download my resume:</p>
+            <a href="resume/resume.pdf" target="_blank" class="resume-button">
+            <i class="fa fa-file-pdf-o"></i> View Resume (PDF)
+            </a>
+        </div>
+        </section>
+
 
 
     </main>
@@ -138,10 +148,10 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
         <div id="lower-footer" class="col-start-1 col-end-5 m-col-start-2 m-col-end-12">
         <div id="icons" >
         
-                <a href="www.google.com"><li class="fa fa-facebook"></li></a>
-                <a href=""><li class="fa fa-linkedin"></li></a>
-                <a href=""><li class="fa fa-github"></li></a>
-                <a href=""><li class="fa fa-instagram"></li></a>
+                <a href="https://www.facebook.com/akamjot.singh.771/"><li class="fa fa-facebook"></li></a>
+                <a href="https://www.linkedin.com/in/akamjot-singh-6b4889297/"><li class="fa fa-linkedin"></li></a>
+                <a href="https://github.com/akamjot"><li class="fa fa-github"></li></a>
+                <a href="https://www.instagram.com/akamjot_01/"><li class="fa fa-instagram"></li></a>
         
         </div>
 

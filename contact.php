@@ -53,49 +53,27 @@
             <h2 class="line-separator">CONTACT</h2>
 
             
-            </div>
+            <div id="form" class="contact-container col-span-full m-col-start-3 m-col-end-11">
+    <form id="Contactform" method="post">
+        <label for="first_name"></label>
+        <input type="text" name="first_name" required placeholder="First Name" id="first_name">
 
+        <label for="last_name"></label>
+        <input type="text" name="last_name" required placeholder="Last Name" id="last_name">
 
-            <div class="contact-container col-span-full m-col-start-3 m-col-end-11">
+        <label for="email"></label>
+        <input type="email" name="email" required placeholder="E-mail" id="email">
 
-                <div id="email">
-                <p>Email </p>
-                <p>sainiparam947@gmail.com</p>
-                </div>
-            
-                <div id="phone">
-                    <p>Phone</p>
-                    <p>1234567890</p>
-                </div>
-            
-            </div>
+        <label for="comments"></label>
+        <textarea name="comments" placeholder="Enter your message, comments or concerns here..." id="comments"></textarea>
 
-                <div id="form" class="contact-container col-span-full m-col-start-3 m-col-end-11">
+        <input type="submit" value="Send">
+    </form>
 
-        
-
-                <form id="Contactform" method="post" action="includes/sendmail.php">
-   <label for="first_name"></label>
-   <input type="text" name="first_name" required placeholder="First Name" id="first_name">
-
-   <label for="last_name"></label>
-   <input type="text" name="last_name" required placeholder="Last Name" id="last_name">
-
-   <label for="email"></label>
-   <input type="email" name="email" required placeholder="E-mail" id="email">
-
-   <label for="comments"></label>
-   <textarea name="comments" placeholder="Enter your message, comments or concerns here..." id="comments"></textarea>
-
-   <input type="submit" value="send">
-   
-</form>
-
-<section id="feedback">
-    <p>*Please fill out all required sections</p>
-</section>
-
-                </div>
+    <section id="feedback">
+        <p>*Please fill out all required sections</p>
+    </section>
+</div>
 
             
 
@@ -150,8 +128,7 @@
     </section>
 
     </footer>
-    <script src="js/main.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    
+    <script src="js/main.js"></script>
 </body>
 </html>

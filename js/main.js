@@ -137,60 +137,61 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
+  // your video player code...
+  // your GSAP animations...
+  // and your form handler:
   const form = document.querySelector("#Contactform");
   const feedback = document.querySelector("#feedback");
 
-  function regForm(event) {
-      event.preventDefault();
-      const thisform = event.currentTarget;
-      const url = "contact.php";
-      const formdata = 
-          "last_name=" + thisform.elements.last_name.value +
-          "&first_name=" + thisform.elements.first_name.value +
-          "&email=" + thisform.elements.email.value +
-          "&comments=" + thisform.elements.comments.value;
-
-      console.log(formdata);
-      fetch(url, {
-          method: "POST",
-          headers: {
-              "Content-Type": "application/x-www-form-urlencoded"
-          },
-          body: formdata
-      })
-      .then(response => response.json())
-      .then(response => {
-          console.log(response); // Logs the response object
-
-          // Clear previous feedback
-          feedback.innerHTML = "";
-
-          // Check if there are any errors
-          if (response.errors) {
-              response.errors.forEach(error => {
-                  const errorElement = document.createElement("p");
-                  errorElement.textContent = error;
-                  feedback.appendChild(errorElement);
-              });
-          } else {
-              // If no errors, display success message
-              const successElement = document.createElement("p");
-              successElement.textContent = response.message; // Display the success message
-              feedback.appendChild(successElement);
-          }
-
-          // Scroll the feedback section into view
-          feedback.scrollIntoView({ behavior: 'smooth', block: 'end' });
-      })
-      .catch(error => {
-          console.log(error);
-          feedback.innerHTML = "<p>Sorry, there seems to be an issue. Please try again later.</p>";
-      });
+  if (!form || !feedback) {
+    console.log("Form or feedback not found!");
+    return;
   }
 
-  form.addEventListener("submit", regForm);
-})();
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formdata = new URLSearchParams();
+    formdata.append("last_name", form.elements.last_name.value);
+    formdata.append("first_name", form.elements.first_name.value);
+    formdata.append("email", form.elements.email.value);
+    formdata.append("comments", form.elements.comments.value);
+
+    fetch("includes/sendmail.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: formdata
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        feedback.innerHTML = "";
+
+        if (res.errors) {
+          res.errors.forEach((err) => {
+            const el = document.createElement("p");
+            el.textContent = err;
+            el.style.color = "red";
+            feedback.appendChild(el);
+          });
+        } else {
+          const success = document.createElement("p");
+          success.textContent = res.message;
+          success.style.color = "green";
+          feedback.appendChild(success);
+          form.reset();
+        }
+
+        feedback.scrollIntoView({ behavior: "smooth", block: "center" });
+      })
+      .catch((err) => {
+        console.log(err);
+        feedback.innerHTML = "<p style='color: red;'>Something went wrong.</p>";
+      });
+  });
+});
+
 
 
 

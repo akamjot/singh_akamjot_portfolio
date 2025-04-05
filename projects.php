@@ -4,11 +4,11 @@
 <?php
 require_once('includes/connect.php');
 
-// $query = 'SELECT id, name, category, year, software, photo AS images FROM project_pages where id < 5';
+// $query = 'SELECT id, name, category, year, software, photo AS images FROM project_pages where id < 7';
 
 // $results = mysqli_query($connect,$query);
 
-$stmt = $connect->prepare("SELECT id, name, category, year, software, photo AS images FROM project_pages where id < 5");
+$stmt = $connect->prepare("SELECT id, name, category, year, software, photo AS images FROM project_pages where id < 7");
 
 $stmt->execute();
 
@@ -73,31 +73,17 @@ $stmt->execute();
         $image_array = explode(',', $row['images']);
         foreach ($image_array as $image) {
             
-            if ($count == 0 || $count == 2) {
-                echo '
-                <div class="col-span-2 m-col-span-4 m-col-start-3">
-                    <div class="project-card">
-                        <a href="project-page.php?id=' . $row['id'] . '">
-                            <img src="images/' . $image . '" alt="' . $row['name'] . ' project">
-                            <h3>' . $row['name'] . '</h3>
-                            <p>' . $row['category'] . '</p>
-                        </a>
-                    </div>
-                </div>';
-            } else {
-              
-                echo '
-                <div class="col-span-2 m-col-span-4">
-                    <div class="project-card">
-                        <a href="project-page.php?id=' . $row['id'] . '">
-                            <img src="images/' . $image . '" alt="' . $row['name'] . ' project">
-                            <h3>' . $row['name'] . '</h3>
-                            <p>' . $row['category'] . '</p>
-                        </a>
-                    </div>
-                </div>';
-            }
-            $count++; 
+            echo '
+            <div class="col-span-2 m-col-span-4">
+                <div class="project-card">
+                    <a href="project-page.php?id=' . $row['id'] . '">
+                        <img src="images/' . $image . '" alt="' . $row['name'] . ' project">
+                        <h3>' . $row['name'] . '</h3>
+                        <p>' . $row['category'] . '</p>
+                    </a>
+                </div>
+            </div>';
+            
         }
     }
     ?>
